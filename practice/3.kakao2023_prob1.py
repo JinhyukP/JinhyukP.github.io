@@ -70,6 +70,8 @@ D	5 달
 네 번째 개인정보는 D약관에 의해 2019년 11월 28일까지 보관 가능하며, 유효기간이 지났으므로 파기해야 할 개인정보입니다.
 다섯 번째 개인정보는 Z약관에 의해 2019년 3월 27일까지 보관 가능하며, 유효기간이 지났으므로 파기해야 할 개인정보입니다.'''
 
+import re
+
 class date:
     def __init__(self, date_str):
         year, month, day = re.split("\.",date_str)
@@ -106,8 +108,6 @@ def date_comparison(date1, date2):
                 return True
     return False
 
-import re
-
 def solution(today, terms, privacies):
     # make datetime object of 'today'
     today = date(today)
@@ -127,8 +127,23 @@ def solution(today, terms, privacies):
         extinct = extinct_date(start_date,term_length)
         if date_comparison(today, date(extinct)):
             answer.append(idx+1)
-
     return answer
+
+
+# # concise answer
+# def to_days(date):
+#     year, month, day = map(int, date.split("."))
+#     return year * 28 * 12 + month * 28 + day
+
+# def solution(today, terms, privacies):
+#     months = {v[0]: int(v[2:]) * 28 for v in terms}
+#     today = to_days(today)
+#     expire = [
+#         i + 1 for i, privacy in enumerate(privacies)
+#         if to_days(privacy[:-2]) + months[privacy[-1]] <= today
+#     ]
+#     return expire
+
 
 if __name__=="__main__":
     print(solution("2022.05.19", ["A 6", "B 12", "C 3"], ["2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"]))
