@@ -62,7 +62,7 @@ cap	n	deliveries	pickups	result
 따라서, 30을 return 하면 됩니다.
 '''
 
-# # first try --  only part of test passed
+# # first try --  only part of test passed  (Not time-efficient)
 # import copy
 
 # def solution(cap, n, deliveries, pickups):
@@ -120,7 +120,7 @@ cap	n	deliveries	pickups	result
 #     return answer
 
 
-# # second try
+# # second try -- fail
 # def solution(cap, n, deliveries, pickups):
 #     answer = 0
 #     deliveries = deliveries
@@ -139,15 +139,13 @@ cap	n	deliveries	pickups	result
 #             else: #  0 < deliveries[idx] <= (cap - current_delivery)
 #                 current_delivery += deliveries[idx] # we can load all boxes
 #                 deliveries[idx] = 0
-                
-        
-        
 #         if pickups[idx] > 0:
 #             pass
-        
 #     return answer
 
-greedy method
+
+
+# good solution: greedy method
 def solution(cap, n, deliveries, pickups):
     answer = 0
     d = 0
@@ -165,8 +163,10 @@ def solution(cap, n, deliveries, pickups):
         answer += 2 * (idx + 1) * cnt       
     return answer
 
-
-# # make list of house numbers to deliver/pikcup
+  
+  
+# good solution2 (from another participant)
+# make list of house numbers to deliver/pikcup 
 # from itertools import zip_longest as zip
 
 # def tolist(l):
@@ -185,6 +185,9 @@ def solution(cap, n, deliveries, pickups):
 #     p=p[::cap]
 #     return 2*sum([max(x,y) for x,y in zip(d,p,fillvalue=0)])
 
+
+
+
 if __name__=="__main__":
   print("Input 〉  4, 5, [1, 0, 3, 1, 2], [0, 3, 0, 4, 0])
   print("Output  〉 ", solution(4, 5, [1, 0, 3, 1, 2], [0, 3, 0, 4, 0]))
@@ -192,6 +195,4 @@ if __name__=="__main__":
   print("Input 〉	2, 7, [1, 0, 2, 0, 1, 0, 2], [0, 2, 0, 1, 0, 2, 0]")
   print("Output  〉 ", solution(2, 7, [1, 0, 2, 0, 1, 0, 2], [0, 2, 0, 1, 0, 2, 0]))
   print("Expected 〉	30")
-  
-  
   
