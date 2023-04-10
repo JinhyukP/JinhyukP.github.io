@@ -1,19 +1,5 @@
 # code from https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/gan/gan.py
 
-# requirements.txt
-# torch>=0.4.0
-# torchvision
-# matplotlib
-# numpy
-# scipy
-# pillow
-# urllib3
-# scikit-image
-
-
-
-
-
 import argparse
 import os
 import numpy as np
