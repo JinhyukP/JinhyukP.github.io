@@ -6,6 +6,7 @@ import math
 import os
 import argparse
 import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
 
 
 parser = argparse.ArgumentParser()
@@ -25,37 +26,32 @@ print(opt)
 
 cuda = True if torch.cuda.is_available() else False
 
-class SineDataset(torch.utils.data.Dataset):
-    def __init__(self):
-        super(SineDataset, self).__init__()
-        self.data = []
-        self.x = np.arange(0, 10, 0.25) # 40 points
-        self.num_data = 100
+class SineDataset(Dataset):
+    def __init__(self, sine_file, x_file, data_dir="data/sines", transform=None):
+        self.trnasform = transform
+        
+        _sine_file_dir = data_dir + "/" + sine_file
+        _x_file_dir = data_dir + "/" + x_file
+        # load sine wave dataset
+        with open(_sine_file_dir, "rb") as f:
+            self.sine_dataset = np.load(f)
+        # x coordinates of each sine wave
+        with open(_x_file_dir, "rb") as f:
+            self.x = np.load(f)
+        
+    def __len__(self):
+        return len(self.sine_dataset)
     
-    def makeWave(self, amplitude=1, frequency=1, phase=0, vertical_shift=0):
-        wave = amplitude * np.sin(frequency * (self.x + phase)) + vertical_shift
-        return wave
+    def __getitem__(self, idx):
+        return self.sine_dataset[idx, :]
+
     
-    def makeDataset(self):
-        dataset = np.zeros((self.num_data, len(self.x)))
-        for idx in range(self.num_data):
-            amp = 0.8 + np.abs(np.random.randn())
-            freq = 1.3 + 0.3 * np.random.randn()
-            ph = np.pi/2 * np.random.randn()
-            vs = np.random.randn()
-            dataset[idx, :] = self.makeWave(amplitude=amp, frequency=freq, phase=ph, vertical_shift=vs)
-        dataset = torch.from_numpy(dataset)
-        return dataset
-    
+myDataset = SineDataset("sine_dataset.npy", "sine_x.npy")
+
+
 # Configure data loader
 os.makedirs("data/sines", exist_ok=True)
-# dataloader = torch.utils.data.DataLoader(
-    
-#     # TODO
-    
-#     batch_size=opt.batch_size,
-#     shuffle=True,
-# )
+dataloader = DataLoader(myDataset, batch_size=opt.batch_size, shuffle=True)
 
 class Generator(nn.Module):
     def __init__(self):
