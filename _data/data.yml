@@ -8,24 +8,22 @@ sidebar:
   education: True # set to False if you want education in main section instead of in sidebar
 
   # Profile information
-  name: Alan Doe
-  tagline: Full Stack Developer
-  avatar: profile.png #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+  name: Jinhyuk Park
+  tagline: Deep Learning Researcher
+  avatar: jinhyuk_profile.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
-  email: example@email.com
-  phone: 012 345 6789
-  timezone: America/Cancun # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
+  email: jhpark@robotics.snu.ac.kr
+  timezone: Republic of Korea/Seoul # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
   citizenship:
-  website: https://example.com/ # Include the full website URL, including "http://" or "https://".
-  linkedin: alandoe
-  xing: alandoe
-  github: jekyll
+  website: https://jinhyukp.github.io/ # Include the full website URL, including "http://" or "https://".
+  linkedin: jinhyukpark
+  github: JinhyukP
   telegram: # add your nickname without '@' sign
   gitlab:
   bitbucket:
-  bluesky: '@jekyllrb.bsky.social' # Specify your full Bluesky handle
-  twitter: '@jekyllrb'
+  bluesky:  # Specify your full Bluesky handle
+  twitter: 
   stack-overflow: # Number/Username, e.g. 123456/alandoe
   codewars:
   goodreads: # Number-Username, e.g. 123456-alandoe
@@ -37,28 +35,21 @@ sidebar:
   languages:
     title: Languages
     info:
-    - idiom: English
+    - idiom: Korean
       level: Native
 
-    - idiom: French
+    - idiom: English
       level: Professional
 
-    - idiom: Spanish
-      level: Professional
 
-  interests:
-    title: Interests
-    info:
-    - item: Climbing
-      link:
+  # interests:
+  #   title: Interests
+  #   info:
+  #   - item: Table Tennis
+  #     link:
 
-
-    - item: Snowboarding
-      link:
-
-
-    - item: Cooking
-      link:
+  #   - item: Cooking
+  #     link:
 
 
 career-profile:
