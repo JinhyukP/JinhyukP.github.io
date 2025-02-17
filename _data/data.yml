@@ -86,84 +86,59 @@ experiences:
   title: Experiences
   info:
   - role: Visiting Researcher
-    time: 2015 - Present
-    company: Startup Hubs, San Francisco
+    time: May 2023 - Feb 2024
+    company: Bionics Research Center, Korea Institute of Science and Technology
     details: |
-      Describe your role here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Donec quam felis, ultricies nec,
-      pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-      enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-      error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-      architecto beatae vitae dicta sunt explicabo.
-        - Bullet point
-        - Bullet point
+      Designed and implemented a deep learning model to predict blood pressure 
+      from ECG (electrocardiogram) and PPG (photoplethysmogram) waveforms, 
+      enabling non-invasive and continuous cuffless monitoring.
+      In addition, conducted research on brain-computer interface that 
+      control exoskeleton robot using motor imagery.
+
 
 projects:
   title: Projects
-  intro: >
-    You can list your side projects in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+  # intro: >
+    # You can list your side projects in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
   assignments:
-  - title: Velocity
-    link: "#hook"
-    tagline: "A responsive website template designed to help startups promote, market and sell their products."
+  - title: Brain-Computer Interface to Control Exoskeleton Robot using Motor Imagery
+    company: Korea Institute of Science and Technology
+    tagline: "Conducted experiment to develop a brain-computer interface (BCI) that controls an lower-limb exoskeleton robot through motor imagery, utilizing deep learning to analyze EEG (electroencephalogram) signals."
 
-  - title: DevStudio
-    link: "#"
-    tagline: "A responsive website template designed to help web developers/designers market their services."
+  - title: ML Algorithm for Acoustic Anomaly Detection of Ship Engines
+    company: Hanwha Ocean
+    tagline: "Developed an autoencoder-based anomaly detection algorithm to identify defects in Mel-spectrograms, trained exclusively on normal data."
 
-  - title: Tempo
-    link: "#"
-    tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+  - title: Learning-based Collision Detection Algorithm
+    company: Doosan Robotics
+    tagline: "Develop a resource-efficient model based on a one-dimensional CNN architecture for real-time human-robot collision detection, given limited training data and computational power. Furthermore, conducted a series of controlled human-robot collision experiments to collect a diverse dataset suitable for training and validate our method."
 
-  - title: Atom
-    link: "#"
-    tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+  - title: Deep Reinforcement Learning Algorithm for Industrial Robots
+    company: Samsung Electronics
+    tagline: "Implementation of socket programming for real-time network communication between a robot controller and an industrial robotic arm. Then, implemented a RL algorithm based on the guided policy search for peg-in-hole task. Finally, design the action of RL agent using exponential coordinates (se(3)) to ensure RL algorithm can solve the problem."
 
-  - title: Delta
-    link: "#"
-    tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
-
-oss:
-  title: OSS Contributions
-  intro: >
-    You can list your open source software contributions in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-  contributions:
-  - title: Tempo
-    link: "#"
-    tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
-
-  - title: Atom
-    link: "#"
-    tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-  - title: Delta
-    link: "#"
-    tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+  - title: Research on Biomechanical Behavior and Locomotion Control
+    company: Bio-Mimetic Robot Research Center, Agency for Defense Development
+    tagline: "Develop a physics-based simulation tool for bio-mimetic robots to optimize design variables."
 
 publications:
   title: Publications
-  intro: |
-    You can list your publications in this section. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-    bibendum fringilla a eu lectus.
+  # intro: |
+    # You can list your publications in this section. 
   papers:
-  - title: The Art of Computer Programming
-    link: "#"
-    authors: Donald E. Knuth
-    conference: Addison-Wesley, 1968
+  - title: (In preparation) Memory Replay for Subject Adaptation in Cuffless Blood Pressure Estimation
+    # link: "#"
+    authors: Jinhyuk Park, et al.
 
-  - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-    link: "#"
-    authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-    conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
+  - title: Learning-based real-time detection of robot collisions without joint torque sensors
+    link: "https://doi.org/10.1109/LRA.2020.3033269"
+    authors: Kyu Min Park, Jihwan Kim, Jinhyuk Park, Frank C. Park
+    conference: "IEEE Robotics and Automation Letters"
 
-  - title: A syntax directed compiler for Algol 60
-    link: "#"
-    authors: Edgar T. Irons
-    conference: "Comm. ACM 4 (1961), 51–55"
+  - title: A Generative Neural Network for Learning Coordinated Reach-Grasp Motions
+    link: "https://doi.org/10.1109/LRA.2019.2917381"
+    authors: Eunsuk Chong, Jinhyuk Park, Hyungmin Kim, Frank C. Park
+    conference: "IEEE Robotics and Automation Letters"
 
 
 skills:
